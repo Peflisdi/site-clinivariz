@@ -2,7 +2,6 @@
 
 import React from 'react';
 import './Header.css';
-// 1. Importe a imagem do logo
 import logo from '../../assets/clinivariz-orange.png';
 
 function Header() {
@@ -10,7 +9,6 @@ function Header() {
     <header className="site-header">
       <div className="header-container">
         <div className="logo">
-          {/* 2. Substitua o <h1> pela tag <img> */}
           <img src={logo} alt="Logo da Clinivariz" className="site-logo" />
         </div>
         <nav className="navigation">

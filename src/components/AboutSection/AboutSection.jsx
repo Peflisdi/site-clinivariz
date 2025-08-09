@@ -12,10 +12,10 @@ function AboutSection() {
           <h3 className="subtitle">Angiologista e Cirurgião Vascular</h3>
           <div className="divider"></div>
           <p className="description">
-            Experiência de mais de 20 anos no tratamento da doença vascular.
+            Experiência de mais de 30 anos no tratamento da doença vascular.
           </p>
           <p className="description">
-            Referência na região no Tratamento do Lipedema.
+            Referência na região de Macaé - RJ.
           </p>
           <a href="#contato" className="cta-button">
             Agende sua Consulta

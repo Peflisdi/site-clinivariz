@@ -94,7 +94,7 @@
 @media (max-width: 992px) {
   .about-section {
     min-height: auto;
-    padding-bottom: 350px;
+    padding: 4rem 2rem 350px;
   }
 
   .about-text-content {

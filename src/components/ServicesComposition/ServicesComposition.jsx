@@ -1,19 +1,20 @@
-// src/components/ServicesComposition/ServicesComposition.jsx
-
 import React from 'react';
 import './ServicesComposition.css';
 
-// Os dados continuam os mesmos, mas as imagens agora serão usadas como fundo.
-import espumaImg from '../../assets/servico-espuma.jpg';
-import endolaserImg from '../../assets/servico-endolaser.jpg';
-import rostoImg from '../../assets/servico-rosto.jpg';
-import clacsImg from '../../assets/servico-clacs.jpg';
+import espumaImg from '../../assets/espuma.png';
+import endolaserImg from '../../assets/laser.png';
+import rostoImg from '../../assets/exames.png';
+import clacsImg from '../../assets/vasos.png';
+
+import unimed from '../../assets/unimed.svg';
+import bradesco from '../../assets/bradesco.png';
+import golden from '../../assets/golden-cross.png'
 
 const servicesData = [
-    { id: 'espuma', title: 'Tratamento com Espuma Densa', description: 'A escleroterapia com espuma densa é um tratamento eficaz para a eliminação completa das varizes...', image: espumaImg },
-    { id: 'endolaser', title: 'Tratamento com Endolaser', description: 'O endolaser é um método amplamente adotado para o tratamento de veias safenas e varizes calibrosas...', image: endolaserImg },
-    { id: 'rosto', title: 'Vasinhos no Rosto', description: 'O aparecimento de vasinhos no rosto é uma preocupação estética para muitos. A boa notícia é que estes vasos são tratados com laser Transdermico...', image: rostoImg },
-    { id: 'clacs', title: 'Tratamento com Laser - CLACS', description: 'O Laser Transdérmico representa uma revolução no tratamento de varizes de menor calibre...', image: clacsImg },
+    { id: 'espuma', title: 'Escleroterapia Espuma com Laser', description: 'A Aplicação de Espuma Densa é uma técnica em que um medicamento especial, em forma de espuma, é injetado diretamente na veia, provocando seu fechamento. É um método rápido, que pode tratar até veias de médio e grande calibre, com ótimo resultado estético e funcional.', image: espumaImg },
+    { id: 'endolaser', title: 'Cirurgia de varizes com Laser', description: 'O Tratamento de Varizes com Laser é uma técnica moderna e minimamente invasiva que utiliza energia de luz para fechar as veias doentes, melhorando a circulação e o aspecto das pernas. É rápido, seguro e não requer cortes, permitindo uma recuperação mais confortável.', image: endolaserImg },
+    { id: 'rosto', title: 'Exames Ecodoppler', description: 'O Exame Ecodoppler é fundamental antes de iniciar qualquer tratamento. Ele utiliza ultrassom para visualizar as veias e avaliar o fluxo sanguíneo, permitindo identificar a causa do problema e escolher o procedimento mais adequado para cada paciente.', image: rostoImg },
+    { id: 'clacs', title: 'Microcirurgia de varizes', description: 'O tratamento de varizes e microvasos é indicado para quem deseja eliminar aqueles vasinhos e veias mais visíveis que causam desconforto e afetam a estética. Com procedimentos seguros e eficazes, devolvemos às pernas uma aparência mais bonita e saudável.', image: clacsImg },
 ];
 
 function ServicesComposition() {
@@ -21,12 +22,12 @@ function ServicesComposition() {
     <section id="servicos" className="services-composition-section">
       <div className="section-title">
         <h2>Nossos Tratamentos</h2>
-        <p>Passe o mouse sobre um tratamento para saber mais.</p>
+        <p className="desktop-subtitle">Passe o mouse sobre um tratamento para saber mais.</p>
+        <p className="mobile-subtitle">Conheça nossos procedimentos e diferenciais.</p>
       </div>
 
       <div className="composition-container">
         {servicesData.map((service) => (
-          // Cada cartão terá sua própria imagem de fundo definida no CSS.
           <div
             key={service.id}
             className="service-card"
@@ -38,6 +39,15 @@ function ServicesComposition() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="convenios-container">
+        <h4 className="convenios-title">Convênios Aceitos</h4>
+        <div className="logos-container">
+          <img src={unimed} alt="Unimed" />
+          <img src={bradesco} alt="Bradesco Saúde" />
+          <img src={golden} alt="Golden Cross" />
+        </div>
       </div>
     </section>
   );

@@ -1,27 +1,21 @@
-/* src/components/Header/Header.css */
-
-/* Ocupa toda a largura da tela e define a cor de fundo */
 .site-header {
   background-color: #fff;
-  /* background-color: var(--cor-fundo-bege); */
-  padding: 1rem 0; /* Espaçamento vertical, sem espaçamento horizontal */
-  border-bottom: 1px solid #e0e0e0; /* Linha divisória mais sutil */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave para dar profundidade */
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Container que centraliza o conteúdo */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* Largura máxima para o conteúdo */
-  margin: 0 auto; /* Truque para centralizar o container */
-  padding: 0 2rem; /* Espaçamento nas laterais para não colar nas bordas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* Estilo do Logo */
 .site-logo {
-  height: 50px; /* Ajuste esta altura conforme necessário */
+  height: 50px;
   width: auto;
 }
 
@@ -30,13 +24,12 @@
   margin-left: 2rem;
   text-decoration: none;
   color: var(--cor-texto-escuro);
-  font-weight: 600; /* Semi-negrito */
+  font-weight: 600;
   font-size: 1rem;
-  position: relative; /* Necessário para o efeito de sublinhado */
-  padding-bottom: 0.5rem; /* Espaço para o sublinhado aparecer */
+  position: relative;
+  padding-bottom: 0.5rem;
 }
 
-/* Efeito de sublinhado animado ao passar o mouse */
 .navigation a::after {
   content: "";
   position: absolute;
@@ -52,26 +45,21 @@
   width: 100%;
 }
 
-/* ================================== */
-/* RESPONSIVIDADE            */
-/* ================================== */
-
-/* Estilos para ecrãs com largura máxima de 768px (tablets e telemóveis) */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column; /* Coloca o logo em cima da navegação */
-    gap: 1rem; /* Adiciona um espaço entre o logo e a navegação */
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .navigation {
     width: 100%;
     display: flex;
-    justify-content: space-around; /* Distribui os links igualmente */
-    border-top: 1px solid #e0e0e0; /* Adiciona uma linha separadora no mobile */
+    justify-content: space-around;
+    border-top: 1px solid #e0e0e0;
     padding-top: 1rem;
   }
 
   .navigation a {
-    margin-left: 0; /* Remove a margem da esquerda nos links */
+    margin-left: 0;
   }
 }

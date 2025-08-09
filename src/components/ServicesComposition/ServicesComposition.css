@@ -1,9 +1,6 @@
-/* src/components/ServicesComposition/ServicesComposition.css */
-
 .services-composition-section {
-  padding: 5rem 2rem;
-  /* background-color: var(--cor-fundo-bege); */
-  background-color: #ffffff;
+  padding: 2rem 2rem 0rem;
+  background: url(../../assets/services-bg.jpg) no-repeat 50% 100% / 100%;
 }
 
 .section-title {
@@ -11,16 +8,18 @@
   margin-bottom: 3rem;
 }
 
-/* O container que vai segurar os nossos cartões lado a lado */
+.mobile-subtitle {
+  display: none;
+}
+
 .composition-container {
-  display: flex; /* A base para o nosso layout horizontal */
+  display: flex;
   max-width: 1200px;
   min-height: 600px;
   margin: 0 auto;
-  gap: 10px; /* Um pequeno espaço entre os cartões */
+  gap: 10px;
 }
 
-/* Estilo de cada cartão no seu estado "fechado" (padrão) */
 .service-card {
   position: relative;
   border-radius: 20px;
@@ -28,25 +27,17 @@
   background-position: center;
   cursor: pointer;
   overflow: hidden;
-
-  /* ✨ CÓDIGO REFATORADO ✨ */
-  flex-shrink: 1; /* Permite que o item encolha se necessário */
-  flex-grow: 1; /* Permite que o item cresça para preencher o espaço */
-  flex-basis: 0; /* Tamanho inicial, será sobrescrito pelo flex-grow */
-
-  /* A transição agora é no flex, de forma geral */
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 0;
   transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-  will-change: flex; /* Dica para o navegador */
+  will-change: flex;
 }
 
-/* Quando passamos o mouse, a mágica acontece! */
 .service-card:hover {
-  /* O cartão com o mouse em cima "cresce" muito mais que os outros,
-     fazendo-os encolher para dar espaço. */
   flex-grow: 7;
 }
 
-/* Um overlay escuro sobre a imagem para garantir que o texto seja legível */
 .service-card::before {
   content: "";
   position: absolute;
@@ -66,7 +57,6 @@
   opacity: 0.9;
 }
 
-/* O conteúdo dentro do cartão */
 .card-content {
   position: absolute;
   bottom: 0;
@@ -84,27 +74,98 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* A descrição, por padrão, fica escondida */
 .card-content p {
   margin-top: 1rem;
-  max-height: 0; /* Esconde o parágrafo */
+  max-height: 0;
   opacity: 0;
   transform: translateY(20px);
   transition: max-height 0.4s ease-out, opacity 0.4s ease-out 0.2s,
     transform 0.4s ease-out 0.2s;
 }
 
-/* Ao passar o mouse, a descrição aparece */
 .service-card:hover .card-content p {
-  max-height: 200px; /* Dá espaço para o parágrafo aparecer */
+  max-height: 200px;
   opacity: 1;
   transform: translateY(0);
 }
 
-/* --- Responsividade --- */
+.convenios-container {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  padding: 2rem;
+  border-top: 1px solid var(--cor-terroso);
+}
+
+.convenios-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cor-texto-escuro);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+  margin: 0 0 2rem 0;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+@keyframes smooth-cycle-highlight {
+  0%,
+  100% {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  5%,
+  30% {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  35% {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+.logos-container img {
+  height: 55px;
+  max-width: 180px;
+  animation-name: smooth-cycle-highlight;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.logos-container img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.logos-container img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.logos-container img:nth-child(3) {
+  animation-delay: 4s;
+}
+
 @media (max-width: 992px) {
-  /* Em telas menores, o layout horizontal não funciona bem.
-     Então, mudamos para um layout vertical, empilhando os cartões. */
+  .desktop-subtitle {
+    display: none;
+  }
+  .mobile-subtitle {
+    display: block;
+  }
+  .services-composition-section {
+    padding: 2rem 2rem 4rem;
+  }
   .composition-container {
     flex-direction: column;
     min-height: auto;
@@ -114,8 +175,6 @@
   .service-card {
     min-height: 250px;
   }
-
-  /* Forçamos a descrição a estar sempre visível no mobile */
   .service-card .card-content p {
     max-height: 200px;
     opacity: 1;

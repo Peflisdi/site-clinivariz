@@ -1,7 +1,7 @@
 .doctor-bio-section {
-  padding: 8rem 2rem;
+  padding: 8rem 2rem 2rem;
   background-color: var(--cor-fundo-branco);
-  background: url(../../assets/about-bg.jpg) no-repeat 50% 0% / cover;
+  background: url(../../assets/about-bg.jpg) no-repeat 50% 0% / 100%;
 }
 
 .bio-container {
@@ -80,6 +80,9 @@
 }
 
 @media (max-width: 992px) {
+  .doctor-bio-section {
+    padding: 4rem 2rem 2rem;
+  }
   .bio-container {
     grid-template-columns: 1fr;
     gap: 3rem;
