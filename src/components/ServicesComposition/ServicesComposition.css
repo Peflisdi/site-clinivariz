@@ -3,7 +3,7 @@
   background: url(../../assets/services-bg.jpg) no-repeat 50% 100% / 100%;
 }
 
-.section-title,
+#servicos .section-title,
 .composition-container,
 .convenios-container {
   opacity: 0;
