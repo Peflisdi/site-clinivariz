@@ -8,7 +8,7 @@ import doctorPhoto from '../../assets/Dr.Humberto.png';
 function DoctorBioSection() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.2,
   });
 
   return (

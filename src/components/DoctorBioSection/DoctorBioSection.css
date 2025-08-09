@@ -101,4 +101,13 @@
   .stat-item {
     text-align: center;
   }
+  .bio-title {
+    font-size: 2.2rem;
+  }
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  .bio-description {
+    font-size: 1rem;
+  }
 }
