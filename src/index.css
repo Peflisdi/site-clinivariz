@@ -1,0 +1,42 @@
+/* src/index.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6; /* Um cinza muito claro para o fundo geral */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ✨ AQUI ESTÁ A CORREÇÃO PRINCIPAL ✨
+  Garante que o container da nossa aplicação React (#root)
+  ocupe toda a tela, sem margens ou espaçamentos internos indesejados.
+*/
+#root {
+  width: 100%;
+  min-height: 100vh; /* Garante que a app ocupe no mínimo 100% da altura da tela */
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --cor-primaria: #f67f2f; /* Laranja Principal */
+  --cor-primaria-rgb: 246, 127, 47;
+  --cor-fundo-bege: #f7e9db; /* Bege Quente (ótimo para fundos de seção) */
+  --cor-pessego: #fbc08b; /* Laranja Pêssego (para realces) */
+  --cor-terroso: #e5a177; /* Laranja Terroso (para detalhes) */
+  --cor-rosa: #cfac9c; /* Rosa Empoeirado */
+
+  /* Cores de suporte que combinam bem */
+  --cor-texto-escuro: #4a4a4a; /* Um cinza escuro para texto, mais suave que o preto */
+  --cor-texto-claro: #ffffff;
+  --cor-fundo-branco: #ffffff;
+}

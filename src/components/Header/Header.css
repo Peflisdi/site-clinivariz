@@ -1,0 +1,77 @@
+/* src/components/Header/Header.css */
+
+/* Ocupa toda a largura da tela e define a cor de fundo */
+.site-header {
+  background-color: #fff;
+  /* background-color: var(--cor-fundo-bege); */
+  padding: 1rem 0; /* Espaçamento vertical, sem espaçamento horizontal */
+  border-bottom: 1px solid #e0e0e0; /* Linha divisória mais sutil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave para dar profundidade */
+}
+
+/* Container que centraliza o conteúdo */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Largura máxima para o conteúdo */
+  margin: 0 auto; /* Truque para centralizar o container */
+  padding: 0 2rem; /* Espaçamento nas laterais para não colar nas bordas */
+}
+
+/* Estilo do Logo */
+.site-logo {
+  height: 50px; /* Ajuste esta altura conforme necessário */
+  width: auto;
+}
+
+/* Estilo da Navegação */
+.navigation a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--cor-texto-escuro);
+  font-weight: 600; /* Semi-negrito */
+  font-size: 1rem;
+  position: relative; /* Necessário para o efeito de sublinhado */
+  padding-bottom: 0.5rem; /* Espaço para o sublinhado aparecer */
+}
+
+/* Efeito de sublinhado animado ao passar o mouse */
+.navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-primaria);
+  transition: width 0.3s ease-in-out;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+/* ================================== */
+/* RESPONSIVIDADE            */
+/* ================================== */
+
+/* Estilos para ecrãs com largura máxima de 768px (tablets e telemóveis) */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Coloca o logo em cima da navegação */
+    gap: 1rem; /* Adiciona um espaço entre o logo e a navegação */
+  }
+
+  .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Distribui os links igualmente */
+    border-top: 1px solid #e0e0e0; /* Adiciona uma linha separadora no mobile */
+    padding-top: 1rem;
+  }
+
+  .navigation a {
+    margin-left: 0; /* Remove a margem da esquerda nos links */
+  }
+}
