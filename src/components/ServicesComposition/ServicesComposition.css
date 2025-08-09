@@ -7,13 +7,13 @@
 .composition-container,
 .convenios-container {
   opacity: 0;
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .services-composition-section.is-visible .section-title,
 .services-composition-section.is-visible .composition-container,
 .services-composition-section.is-visible .convenios-container {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .services-composition-section.is-visible .composition-container {
@@ -21,7 +21,7 @@
 }
 
 .services-composition-section.is-visible .convenios-container {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 .section-title {
