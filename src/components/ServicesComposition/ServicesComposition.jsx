@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import './ServicesComposition.css';
 
 import espumaImg from '../../assets/espuma.png';
@@ -18,8 +19,13 @@ const servicesData = [
 ];
 
 function ServicesComposition() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <section id="servicos" className="services-composition-section">
+    <section id="servicos" className={`services-composition-section ${inView ? 'is-visible' : ''}`} ref={ref}>
       <div className="section-title">
         <h2>Nossos Tratamentos</h2>
         <p className="desktop-subtitle">Passe o mouse sobre um tratamento para saber mais.</p>

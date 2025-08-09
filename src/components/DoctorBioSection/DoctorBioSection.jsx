@@ -8,12 +8,12 @@ import doctorPhoto from '../../assets/Dr.Humberto.png';
 function DoctorBioSection() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.3,
   });
 
   return (
     <section className="doctor-bio-section" ref={ref}>
-      <div className="bio-container">
+      <div className={`bio-container ${inView ? 'is-visible' : ''}`}>
         <div className="bio-image-content">
           <img 
             src={doctorPhoto} 
@@ -33,13 +33,13 @@ function DoctorBioSection() {
           <div className="stats-container">
             <div className="stat-item">
               <span className="stat-number">
-                +<CountUp start={0} end={inView ? 30 : 0} duration={2.5} />
+                +<CountUp start={0} end={inView ? 30 : 0} duration={4} />
               </span>
               <p className="stat-label">Anos de Experiência</p>
             </div>
             <div className="stat-item">
               <span className="stat-number">
-                +<CountUp start={0} end={inView ? 10000 : 0} duration={3} separator="." />
+                +<CountUp start={0} end={inView ? 10000 : 0} duration={5} separator="." />
               </span>
               <p className="stat-label">Pacientes Atendidos</p>
             </div>

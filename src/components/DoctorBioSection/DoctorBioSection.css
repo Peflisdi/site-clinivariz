@@ -1,7 +1,19 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .doctor-bio-section {
   padding: 8rem 2rem 2rem;
   background-color: var(--cor-fundo-branco);
   background: url(../../assets/about-bg.jpg) no-repeat 50% 0% / 100%;
+  overflow-x: hidden;
 }
 
 .bio-container {
@@ -11,6 +23,19 @@
   grid-template-columns: 1fr 1.5fr;
   align-items: center;
   gap: 5rem;
+}
+
+.bio-image-content,
+.bio-text-content {
+  opacity: 0;
+}
+
+.bio-container.is-visible .bio-image-content {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.bio-container.is-visible .bio-text-content {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
 .bio-image-content {
