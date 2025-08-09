@@ -2,8 +2,9 @@
 
 import Header from './components/Header/Header.jsx';
 import AboutSection from './components/AboutSection/AboutSection.jsx';
+import DoctorBioSection from './components/DoctorBioSection/DoctorBioSection.jsx';
 import ServicesComposition from './components/ServicesComposition/ServicesComposition.jsx';
-import ContactSection from './components/ContactSection/ContactSection.jsx'; // 1. Importe
+import ContactSection from './components/ContactSection/ContactSection.jsx';
 import './App.css';
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <div className="App">
       <Header />
       <AboutSection />
+      <DoctorBioSection />
       <ServicesComposition />
-      <ContactSection /> {/* 2. Adicione no final */}
+      <ContactSection />
     </div>
   );
 }

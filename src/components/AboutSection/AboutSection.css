@@ -1,51 +1,40 @@
 .about-section {
   min-height: 800px;
-  padding: 4rem 2rem;
+  padding: 7rem 2rem;
   background-image: url("../../assets/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
-}
-
-.glass-card {
-  width: 100%;
-  max-width: 1200px;
-  background: rgba(var(--cor-fundo-branco-rgb, 255, 255, 255), 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
-  border: 1px solid rgba(var(--cor-fundo-branco-rgb, 255, 255, 255), 0.3);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-  padding: 4rem;
+  overflow: hidden;
 }
 
 .about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .about-text-content {
+  max-width: 550px;
   text-align: left;
 }
 
-.about-image-content {
-  text-align: center;
-}
-
-.doctor-photo {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-  object-position: 50% 20%;
-  aspect-ratio: 1 / 1.1;
+.leg-image-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  max-height: 95%;
+  height: 95%;
+  width: auto;
+  max-width: 450px;
+  z-index: 1;
+  pointer-events: none;
+  /* opacity: 0.9; */
 }
 
 .title {
@@ -105,23 +94,23 @@
 @media (max-width: 992px) {
   .about-section {
     min-height: auto;
+    padding-bottom: 350px;
   }
 
-  .glass-card {
-    padding: 2rem;
-  }
-
-  .about-container {
-    grid-template-columns: 1fr;
+  .about-text-content {
+    max-width: 100%;
     text-align: center;
   }
 
-  .about-image-content {
-    grid-row: 1;
-    margin-bottom: 3rem;
+  .divider {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .divider {
-    margin: 0 auto 2rem;
+  .leg-image-decoration {
+    right: 50%;
+    transform: translateX(50%);
+    max-height: 350px;
+    opacity: 1;
   }
 }

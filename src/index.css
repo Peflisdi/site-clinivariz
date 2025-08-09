@@ -35,8 +35,7 @@ body {
   --cor-terroso: #e5a177; /* Laranja Terroso (para detalhes) */
   --cor-rosa: #cfac9c; /* Rosa Empoeirado */
 
-  /* Cores de suporte que combinam bem */
-  --cor-texto-escuro: #4a4a4a; /* Um cinza escuro para texto, mais suave que o preto */
+  --cor-texto-escuro: #4a4a4a;
   --cor-texto-claro: #ffffff;
   --cor-fundo-branco: #ffffff;
 }
